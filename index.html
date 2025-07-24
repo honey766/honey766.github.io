@@ -7,59 +7,106 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>리저렉션</h1>
+    <h1>공무</h1>
     <div class="timer-section">
         <div class="timer-item">
-            <span class="timer-label">딸방</span>
-            <div class="time" data-duration="1800">30:00</div>
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label">좌머리 공무</span>
+                <div class="time" data-duration="5">00:05</div>
+            </div>
             <button class="start-button">시작</button>
         </div>
         <div class="timer-item">
-            <span class="timer-label">wl존법사s2</span>
-            <div class="time" data-duration="1800">30:00</div>
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label">중머리 공무</span>
+                <div class="time" data-duration="45">00:45</div>
+            </div>
             <button class="start-button">시작</button>
         </div>
         <div class="timer-item">
-            <span class="timer-label">등가슴</span>
-            <div class="time" data-duration="1800">30:00</div>
-            <button class="start-button">시작</button>
-        </div>
-        <div class="timer-item">
-            <span class="timer-label">한조오</span>
-            <div class="time" data-duration="2520">42:00</div>
-            <button class="start-button">시작</button>
-        </div>
-        <div class="timer-item">
-            <span class="timer-label">리저렉션-4</span>
-            <div class="time" data-duration="1800">30:00</div>
-            <button class="start-button">시작</button>
-        </div>
-        <div class="timer-item">
-            <span class="timer-label">리저렉션-5</span>
-            <div class="time" data-duration="1800">30:00</div>
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label">우머리 공무</span>
+                <div class="time" data-duration="45">00:45</div>
+            </div>
             <button class="start-button">시작</button>
         </div>
     </div>
-
-    <h1>개인</h1>
+    
+    <h1>버프 해제</h1>
     <div class="timer-section">
         <div class="timer-item">
-            <span class="timer-label">개인 유혹</span>
-            <div class="time" data-duration="180">03:00</div>
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label">중머리 5갈</span>
+                <div class="time" data-duration="3">00:03</div>
+            </div>
             <button class="start-button">시작</button>
         </div>
         <div class="timer-item">
-            <span class="timer-label">첫 개인 유혹</span>
-            <div class="time" data-duration="120">02:00</div>
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label">중머리 3갈</span>
+                <div class="time" data-duration="180">03:00</div>
+            </div>
+            <button class="start-button">시작</button>
+        </div>
+    </div>
+    
+    <h1>리저렉션</h1>
+    <div class="timer-section">
+        <div class="timer-item">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label editable">1파티</span>
+                <div class="time" data-duration="1800">30:00</div>
+            </div>
             <button class="start-button">시작</button>
         </div>
         <div class="timer-item">
-            <span class="timer-label">다크와이번 소환</span>
-            <div class="time" data-duration="50">00:50</div>
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label editable">2파티</span>
+                <div class="time" data-duration="1800">30:00</div>
+            </div>
+            <button class="start-button">시작</button>
+        </div>
+        <div class="timer-item">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label editable">3파티</span>
+                <div class="time" data-duration="1800">30:00</div>
+            </div>
+            <button class="start-button">시작</button>
+        </div>
+        <div class="timer-item">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label editable">4파티</span>
+                <div class="time" data-duration="1800">30:00</div>
+            </div>
+            <button class="start-button">시작</button>
+        </div>
+        <div class="timer-item">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label editable">5파티</span>
+                <div class="time" data-duration="1800">30:00</div>
+            </div>
+            <button class="start-button">시작</button>
+        </div>
+        <div class="timer-item">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span class="timer-label editable">6파티</span>
+                <div class="time" data-duration="1800">30:00</div>
+            </div>
             <button class="start-button">시작</button>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const editables = document.querySelectorAll('.editable');
+        editables.forEach(label => {
+            label.addEventListener('click', () => {
+                const newText = prompt('변경할 이름을 입력하세요:', label.textContent);
+                if (newText) label.textContent = newText;
+            });
+        });
+    });
+    </script>
 </body>
 </html>
