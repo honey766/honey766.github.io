@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.timer-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px; /* 전체 너비 제한 */
+    margin-bottom: 40px;
+}
+
+.timer-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+}
+
+.timer-label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+    flex-grow: 1; /* 라벨이 공간을 더 많이 차지하도록 */
+}
+
+.time {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    min-width: 120px; /* 시간 표시 영역 최소 너비 */
+    text-align: right; /* 시간 표시 오른쪽 정렬 */
+    margin-right: 15px; /* 시간과 버튼 사이 간격 */
+}
+
+.start-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
